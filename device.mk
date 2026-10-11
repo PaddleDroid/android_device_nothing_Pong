@@ -469,6 +469,9 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml \
     telephony-ext
 
+PRODUCT_PACKAGES += \
+    NothingNrEnabler
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
