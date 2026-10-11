@@ -1,34 +1,22 @@
 # Camera
-/(vendor|system/vendor)/lib64/libmfec\.so                          u:object_r:same_process_hal_file:s0
-/(vendor|system/vendor)/lib64/libipebpsstriping\.so                u:object_r:same_process_hal_file:s0
-/vendor/lib64/libofflinepostprocclient\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib64/libcamxextension_night\.so                           u:object_r:same_process_hal_file:s0
-/vendor/lib64/libmpbase\.so                                        u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_super_night_raw\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_portrait_super_night_raw\.so              u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_dark_vision_raw\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_beautyshot\.so                            u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_singlecam_bokeh\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_hdr_detection\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_aiscenedetection\.so                      u:object_r:same_process_hal_file:s0
-/vendor/lib64/libmouth_mask_detection.arcsoft\.so                  u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_watermark\.so                             u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_portrait_distortion_correction\.so        u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_high_dynamic_range\.so                    u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_low_light_hdr\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_superportrait\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_dualcam_refocus_image\.so                 u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_dualcam_refocus_video\.so                 u:object_r:same_process_hal_file:s0
-/vendor/lib64/libsuperresolution_raw.arcsoft\.so                   u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_qnnhtp\.so                                u:object_r:same_process_hal_file:s0
-/vendor/lib64/libmorpho_RawDeepDenoise\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_high_dynamic_range_v5\.so                 u:object_r:same_process_hal_file:s0
-/vendor/lib64/libportrait_repair_ppl3_ocl\.so                      u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_t_hdr_raw\.so                             u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_t_hdr_raw_front\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_turbo_fusion_raw_super_night\.so          u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_turbo_fusion_raw_portrait_super_night\.so u:object_r:same_process_hal_file:s0
-/vendor/lib64/libarcsoft_facialrestoration\.so                     u:object_r:same_process_hal_file:s0
+/vendor/bin/hw/vendor\.noth\.hardware\.camera-service                                              u:object_r:vendor_hal_camera_default_exec:s0
+/vendor/lib/rfsa/adsp/libarc_htp_driver_skel\.so                                                   u:object_r:same_process_hal_file:s0
+/vendor/lib/rfsa/adsp/libarcsoft_beauty_hvx_skel\.so                                               u:object_r:same_process_hal_file:s0
+/vendor/lib/rfsa/adsp/libQnnHtpV69\.so                                                             u:object_r:same_process_hal_file:s0
+/vendor/lib/rfsa/adsp/libQnnHtpV69Skel\.so                                                         u:object_r:same_process_hal_file:s0
+/vendor/lib64/libalCFR\.so                                                                         u:object_r:same_process_hal_file:s0
+/vendor/lib64/libarcsoft_.*\.so                                                                    u:object_r:same_process_hal_file:s0
+/vendor/lib64/libdiag\.so                                                                          u:object_r:same_process_hal_file:s0
+/vendor/lib64/libhyperzoom\.arcsoft\.so                                                            u:object_r:same_process_hal_file:s0
+/vendor/lib64/libmorpho_RapidEffect\.so                                                            u:object_r:same_process_hal_file:s0
+/vendor/lib64/libmorpho_RawDeepDenoise\.so                                                         u:object_r:same_process_hal_file:s0
+/vendor/lib64/libmouth_mask_detection\.arcsoft\.so                                                 u:object_r:same_process_hal_file:s0
+/vendor/lib64/libmpbase\.so                                                                        u:object_r:same_process_hal_file:s0
+/vendor/lib64/libnoteengine\.so                                                                    u:object_r:same_process_hal_file:s0
+/vendor/lib64/libQnnHtp\.so                                                                        u:object_r:same_process_hal_file:s0
+/vendor/lib64/libQnnHtpV69Stub\.so                                                                 u:object_r:same_process_hal_file:s0
+/vendor/lib64/libsuperresolution_raw\.arcsoft\.so                                                  u:object_r:same_process_hal_file:s0
+/vendor/lib64/vendor\.qti\.hardware\.camera\.postproc@1\.0-nothing\.so                             u:object_r:same_process_hal_file:s0
 
 # Charging control
 /vendor/bin/nt-charging-control	                u:object_r:nt_chg_exec:s0
@@ -40,6 +28,10 @@
 
 # NFC
 /dev/pn553                                                                                         u:object_r:nfc_device:s0
+
+# Nothing Feature Service
+/vendor/bin/ntf-service                                                                            u:object_r:ntf_exec:s0
+/dev/ntfeature                                                                                     u:object_r:ntf_file:s0
 
 # Sensors
 /(vendor|system/vendor)/bin/hw/android.hardware.sensors@[0-9].[0-9]-service.nt-multihal       u:object_r:hal_sensors_default_exec:s0
@@ -55,3 +47,4 @@
 
 /dev/aw86927_haptic                                                       u:object_r:aac_richtap_device:s0
 /vendor/bin/hw/android\.hardware\.vibrator\.service\.pong\.richtap     u:object_r:hal_vibrator_default_exec:s0
+/vendor/etc/richtapresources(/.*)?                                                                 u:object_r:vendor_richtap_resources:s0

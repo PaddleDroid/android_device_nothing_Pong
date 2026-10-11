@@ -1,3 +1,6 @@
+# RichTap HE resources
+type vendor_richtap_resources, file_type, vendor_file_type;
+
 # PowerShare
 type sysfs_powershare, sysfs_type, fs_type;
 

@@ -1,0 +1,44 @@
+app_domain(nt_camera_app)
+
+allow nt_camera_app {
+  activity_service
+  activity_task_service
+  audio_service
+  audioserver_service
+  autofill_service
+  batteryproperties_service
+  batterystats_service
+  content_capture_service
+  cameraserver_service
+  device_state_service
+  game_service
+  gpu_service
+  hint_service
+  legacy_permission_service
+  light_service
+  location_service
+  media_quality_service
+  media_session_service
+  mediametrics_service
+  mediaextractor_service
+  netstats_service
+  protolog_configuration_service
+  radio_service
+  sensitive_content_protection_service
+  sensorservice_service
+  surfaceflinger_service
+  thermal_service
+  vendor_perf_service
+  uimode_service
+  vibrator_manager_service
+  voiceinteraction_service
+  virtual_device_service
+}:service_manager find;
+
+allow nt_camera_app privapp_data_file:dir create_dir_perms;
+allow nt_camera_app privapp_data_file:{
+  file
+  lnk_file
+} create_file_perms;
+
+r_dir_file(nt_camera_app, adsprpcd_file)

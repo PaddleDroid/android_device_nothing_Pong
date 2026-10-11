@@ -1,0 +1,5 @@
+hal_client_domain(nt_camera_app, hal_noth_camera)
+hal_client_domain(nt_camera_app, vendor_hal_perf)
+
+allow nt_camera_app hal_noth_camera_service:service_manager find;
+binder_call(nt_camera_app, hal_noth_camera_server)

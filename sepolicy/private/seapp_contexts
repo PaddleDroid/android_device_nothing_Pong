@@ -1,3 +1,7 @@
+# Nothing Camera
+user=_app seinfo=platform isPrivApp=true name=com.nothing.camera domain=nt_camera_app type=privapp_data_file levelFrom=all
+user=_app seinfo=platform isPrivApp=true name=com.camera.ufs.service domain=nt_camera_app type=privapp_data_file levelFrom=all
+
 # Glyph
 user=system seinfo=platform isPrivApp=true name=co.aospa.glyph domain=glyph_app type=system_app_data_file levelFrom=all
 

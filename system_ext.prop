@@ -17,6 +17,9 @@ persist.vendor.bluetooth.modem_nv_support=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 ro.bluetooth.leaudio_offload.supported=true
 
+# Device
+ro.product.brand_device_name=Nothing Phone (2)
+
 # Display
 debug.sf.enable_hwc_vds=0
 

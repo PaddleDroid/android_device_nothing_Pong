@@ -107,7 +107,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libdpps.so',
         'vendor/lib64/libsnapdragoncolor-manager.so',
     ): blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'), 
+    'vendor/etc/init/vendor.noth.hardware.camera-service.rc':
+        blob_fixup().regex_replace(r'\bNtCamAlgoCapacity\b', 'CameraServiceCapacity'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

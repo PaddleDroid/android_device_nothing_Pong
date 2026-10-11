@@ -1,0 +1,8 @@
+type hal_noth_camera_service, hal_service_type, service_manager_type, protected_service;
+
+hal_attribute_service(hal_noth_camera, hal_noth_camera_service)
+
+wakelock_use(hal_noth_camera_server)
+
+binder_call(hal_noth_camera_client, hal_noth_camera_server)
+binder_call(hal_noth_camera_server, hal_noth_camera_client)

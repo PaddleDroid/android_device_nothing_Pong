@@ -737,6 +737,7 @@ vendor/lib64/libubifocus.so
 vendor/lib64/libvideoml.so
 vendor/lib64/vendor.qti.hardware.camera.aon@1.0-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so:vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-nothing.so;FIX_SONAME
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -1559,6 +1560,17 @@ vendor/etc/libnfc-nxp.conf
 
 # NFC firmware
 vendor/lib64/libpn560_fw.so
+
+# Nothing camera specific
+vendor/bin/hw/vendor.noth.hardware.camera-service
+vendor/etc/init/vendor.noth.hardware.camera-service.rc
+vendor/etc/vintf/manifest/vendor.noth.hardware.camera-service.xml
+vendor/lib64/vendor.noth.hardware.camera-service-impl.so
+vendor/lib64/vendor.noth.hardware.camera-V1-ndk_platform.so
+
+# Nothing Feature
+vendor/bin/ntf-service
+vendor/etc/init/init.ntf.rc
 
 # Peripheral manager
 vendor/bin/pm-proxy
