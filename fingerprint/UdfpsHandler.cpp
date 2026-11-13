@@ -65,6 +65,7 @@ void UdfpsHandler::run() {
             if (!(state >> ready)) {
                 ALOGE("Unable to read FOD illumination state from %s", mReadyPath.c_str());
                 mPending = false;
+                mFingerDown = false;
                 break;
             }
 
@@ -77,6 +78,7 @@ void UdfpsHandler::run() {
             if (std::chrono::steady_clock::now() >= deadline) {
                 ALOGW("Timed out waiting for FOD illumination");
                 mPending = false;
+                mFingerDown = false;
                 break;
             }
 
