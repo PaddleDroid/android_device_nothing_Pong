@@ -160,8 +160,7 @@ ndk::ScopedAStatus Session::resetLockout(const HardwareAuthToken& /*hat*/) {
 ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int32_t y, float minor,
                                           float major) {
     ALOGI("onPointerDown: x=%d, y=%d, minor=%f, major=%f", x, y, minor, major);
-    mIsAod = false;
-
+    mUdfpsHandler.onPointerDown();
     return ndk::ScopedAStatus::ok();
 }
 
@@ -200,9 +199,8 @@ ndk::ScopedAStatus Session::detectInteractionWithContext(
 }
 
 ndk::ScopedAStatus Session::onPointerDownWithContext(const PointerContext& context) {
-    auto status = onPointerDown(context.pointerId, context.x, context.y, context.minor, context.major);
     mIsAod = context.isAod;
-    return status;
+    return onPointerDown(context.pointerId, context.x, context.y, context.minor, context.major);
 }
 
 ndk::ScopedAStatus Session::onPointerUpWithContext(const PointerContext& context) {

@@ -42,6 +42,11 @@ void UdfpsHandler::onUiReady(bool waitForIllumination) {
     }
 }
 
+void UdfpsHandler::onPointerDown() {
+    std::lock_guard<std::mutex> lock(mMutex);
+    mPointerDown = true;
+}
+
 void UdfpsHandler::onFingerUp() {
     std::lock_guard<std::mutex> lock(mMutex);
     mFingerDown = false;

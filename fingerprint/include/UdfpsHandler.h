@@ -20,6 +20,8 @@ public:
 
     void onUiReady(bool waitForIllumination);
     void onFingerUp();
+    void onPointerDown();
+    bool mPointerDown = false;
 
 private:
     void run();
