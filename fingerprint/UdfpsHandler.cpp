@@ -80,7 +80,7 @@ void UdfpsHandler::run() {
                 break;
             }
 
-            mCondition.wait_for(lock, 10ms);
+            mCondition.wait_for(lock, 2ms);
         }
     }
 }
