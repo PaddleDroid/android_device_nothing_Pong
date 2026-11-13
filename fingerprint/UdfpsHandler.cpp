@@ -30,6 +30,10 @@ UdfpsHandler::~UdfpsHandler() {
 
 void UdfpsHandler::onUiReady(bool waitForIllumination) {
     std::lock_guard<std::mutex> lock(mMutex);
+    if (!mPointerDown) {
+        ALOGW("onUiReady without active pointer, ignoring");
+        return;
+    }
     if (mFingerDown) return;
 
     mFingerDown = true;
@@ -49,6 +53,7 @@ void UdfpsHandler::onPointerDown() {
 
 void UdfpsHandler::onFingerUp() {
     std::lock_guard<std::mutex> lock(mMutex);
+    mPointerDown = false;
     mFingerDown = false;
     mPending = false;
     ++mRequestId;
